@@ -1,12 +1,17 @@
 ﻿using System;
 
-namespace IOCExample.Console
+namespace IOCExample
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BLL bll = new BLL();
+
+            bll.GetProducts().ForEach(x => Console.WriteLine($"{x.Id} - {x.Name} - {x.Price} - {x.Stock}"));
+
+
+            Console.ReadLine();
         }
     }
 }
