@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IOCExample
 {
-    interface IDAL
+    public interface IDAL
     {
         List<Product> GetProducts();
     }
