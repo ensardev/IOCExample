@@ -6,7 +6,7 @@ namespace IOCExample
 {
     public class BLL
     {
-        private DAL _dal { get; set; }
+        private IDAL _dal { get; set; }
 
         public BLL()
         {

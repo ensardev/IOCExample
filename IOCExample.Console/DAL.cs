@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IOCExample
 {
-    public class DAL
+    public class DAL : IDAL
     {
         public List<Product> GetProducts()
         {

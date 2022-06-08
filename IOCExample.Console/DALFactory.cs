@@ -6,7 +6,7 @@ namespace IOCExample
 {
     class DALFactory
     {
-        public static DAL GetDAL()
+        internal static IDAL GetDAL()
         {
             return new DAL();
         }
