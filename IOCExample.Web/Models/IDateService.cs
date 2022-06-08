@@ -7,7 +7,7 @@ namespace IOCExample.Web.Models
         DateTime GetDateTime { get; }
     }
 
-    interface ISingletonDataService : IDateService { }
-    interface IScopedDateService : IDateService { }
-    interface ITransientDateService : IDateService { }
+    public interface ISingletonDataService : IDateService { }
+    public interface IScopedDateService : IDateService { }
+    public interface ITransientDateService : IDateService { }
 }

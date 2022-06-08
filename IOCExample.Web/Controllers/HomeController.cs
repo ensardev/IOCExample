@@ -11,15 +11,18 @@ namespace IOCExample.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ISingletonDataService _singletonDataService;
+        
+        public HomeController(ISingletonDataService singletonDataService)
         {
-            _logger = logger;
+            _singletonDataService = singletonDataService;       
         }
 
-        public IActionResult Index()
+        public IActionResult Index([FromServices]ISingletonDataService singletonDataService2)
         {
+            ViewBag.Time1 = _singletonDataService.GetDateTime.TimeOfDay.ToString();
+
+            ViewBag.Time2 = singletonDataService2.GetDateTime.TimeOfDay.ToString();
             return View();
         }
 
